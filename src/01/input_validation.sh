@@ -29,8 +29,8 @@ InputValidation() {
     echo name of file must consist of English letters and have no more than 7 symbols before dot and 3 after
     echo example: main.sh /opt/test 4 az 5 az.az 3kb
     exit 1
-  elif [[ ${6%%kb*} > 100 ]] || [[ ${6%%kb*} < 1 ]]; then
-    echo size must be no more than 100kb
+  elif (( ${6%%kb*} < 0  ||  ${6%%kb*} > 100 )); then
+    echo size must be no more than 100kb and no less than 0kb
     echo example: main.sh /opt/test 4 az 5 az.az 3kb
     exit 1
   fi
