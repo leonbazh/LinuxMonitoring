@@ -13,7 +13,7 @@ Touch() {
     for(( j=1; j<=file_count; j++ )); do
       free_space=$(df -k --output=avail "$path" | tail -n 1)
         if (( free_space < 1048576 )); then
-          echo "Недостаточно свободного места на диске"
+          echo not enough space in disk
           exit 1
         fi
       file_name=$(FileGen $file_count $file_symbols)
