@@ -11,11 +11,11 @@ Touch() {
     folder_name=$(FolderGen $path $folder_count $folder_symbols)
     mkdir $folder_name
     for(( j=1; j<=file_count; j++ )); do
-      free_space=$(df -k --output=avail "$path" | tail -n 1)
-        if (( free_space < 1048576 )); then
-          echo not enough space in disk
-          exit 1
-        fi
+      free_space=$(df -h / | awk 'NR==2{print $4}')
+      if [[ "$free_space" == "1G" ]]; then
+        echo "Ошибка: Недостаточно свободного места в файловой системе!"
+        exit 1
+      fi
       file_name=$(FileGen $file_count $file_symbols)
       touch_path="${folder_name%/}/${file_name}"
       time=$(date +'%Y-%m-%d %H:%M:%S')
