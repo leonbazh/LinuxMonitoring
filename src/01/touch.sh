@@ -20,8 +20,7 @@ Touch() {
       touch_path="${folder_name%/}/${file_name}"
       time=$(date +'%Y-%m-%d %H:%M:%S')
       file_size=${file_size_full%%kb*}
-      file_size_kb=$((file_size * 1024))
-      dd if=/dev/zero of="$touch_path" bs=1024 count="$file_size_kb" status=none
+      dd if=/dev/zero of="$touch_path" bs=1K count="$file_size" status=none
       echo path: $touch_path time: $time file_size: $file_size_full >> "log.txt"
     done
   done
