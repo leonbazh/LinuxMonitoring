@@ -14,4 +14,4 @@ END_TIME=$(date +%s)
 END_TIME_CLOCK=$(date +%T)
 echo "Script start time: $START_TIME_CLOCK\
       Script end time: $END_TIME_CLOCK\
-      Script execution time (in seconds) = $(( $END_TIME - $START_TIME ))" >> "log.txt"
+      Script execution time (in seconds) = $(( $END_TIME - $START_TIME ))" | tee -a "log.txt"
