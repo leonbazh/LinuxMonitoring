@@ -45,7 +45,6 @@ CleanUpMask() {
     while IFS= read -r line; do
       if [[ $line == *"path:"* ]]; then    
         if [[ $line == *$mask* ]]; then
-          inside_interval=true
           filename=$(echo "$line" | awk '{print $2}')
           foldername=$(dirname $filename)
           rm -rf $filename $foldername
