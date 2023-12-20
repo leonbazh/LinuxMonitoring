@@ -30,7 +30,7 @@ TouchLogs() {
             minutes=$i
             seconds=$i++
             date=$(date -d "2023-$month-$day + $minutes minutes + $seconds seconds" +"%d/%b/%Y:%H:%M:%S %z")
-            echo "$ip - - [$date] \"$method ${url_path%/}${url%/} HTTP/1.1\" $code 197 \"-\" \"$agent\"" >> access$days.log
+            echo "$ip - - [$date] \"$method ${url_path%/}${url%/} HTTP/1.1\" $code $(( RANDOM % 1000 )) \"-\" \"$agent\"" >> access$days.log
         done
     done
 }
