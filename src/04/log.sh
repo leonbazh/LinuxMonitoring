@@ -4,6 +4,14 @@ TouchLogs() {
     for(( days=1; days<=5; days++ ))
     do
         codes=("200" "201" "400" "401" "403" "404" "500" "501" "502" "503")
+        # 200: успешный запрос
+        # 201: создано
+        # 400: неверный запрос
+        # 401: неавторизовано
+        # 403: запрещено
+        # 404: не найдено
+        # 500: внутренняя ошибка сервера
+        # 501, 502, 503: другие виды ошибок и проблемы со связью между клиентом и сервером
         methods=("GET" "POST" "PUT" "DELETE" "PATCH")
         agents=("Mozilla" "Google Chrome" "Opera" "Safari" "Internet Explorer" "Microsoft Edge" "Crawler and bot" "Library and net tool")
         url_paths=("/" "/about" "/contact" "/products" "/services")
