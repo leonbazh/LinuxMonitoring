@@ -15,7 +15,7 @@ TouchLogs() {
         methods=("GET" "POST" "PUT" "DELETE" "PATCH")
         agents=("Mozilla" "Google Chrome" "Opera" "Safari" "Internet Explorer" "Microsoft Edge" "Crawler and bot" "Library and net tool")
         url_paths=("/" "/about" "/contact" "/products" "/services")
-        urls=("/cats.png" "/logo.png" "/video" "/audio" "/flowers.jpg" " ")
+        urls=("/cats.png" "/logo.png" "/video" "/audio" "/flowers.jpg")
         month=$((1 + RANDOM % 11))
         day=$((1 + RANDOM % 25))
         num_entries=$((100 + RANDOM % 901))
