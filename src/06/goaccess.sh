@@ -8,4 +8,5 @@ GoAccess() {
     ((number++))
     file=$path/$log
     goaccess -p $conf $file -o stat$number.html
+  done
 }
