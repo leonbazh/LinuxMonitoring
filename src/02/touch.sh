@@ -16,7 +16,7 @@ Touch() {
       touch_path="${folder_name%/}/${file_name}"
       time=$(date +'%Y-%m-%d %H:%M:%S')
       file_size=${file_size_full%%Mb*}
-      fallocate $touch_path -l $file_sizeMB
+      fallocate -l ${file_size}MB $touch_path 
       echo path: $touch_path time: $time file_size: $file_size_full >> "log.txt"
     done
   done
