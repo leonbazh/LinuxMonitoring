@@ -28,7 +28,7 @@ The russian version of the task can be found in the repository.
 
 ![linux_monitoringv2.0](misc/images/linux_monitoringv2.0.png)
 
-Planet Earth, USA, California, nowadays.
+Planet Earth, nowadays.
 
 The working day has just started and you’ve already been called to your superiors. They tell you that your buddy Seb hasn't shown up for work in four days. There is a risk that his task will not be finished on time.
 So, now it's your responsibility to figure out the monitoring in Linux, so that you can take over for your careless teammate if necessary.
@@ -254,4 +254,4 @@ The page itself can be refreshed within a bash script or a program (in a loop), 
 ##### Run the same tests as in [Part 7](#part-7-prometheus-and-grafana)
 
 
-💡 [Tap here](https://forms.yandex.ru/cloud/641818e069387223cba1286e/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
+💡 [Tap here](https://forms.yandex.ru/cloud/641818e069387223cba1286e/) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.
