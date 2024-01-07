@@ -16,7 +16,7 @@ do
     system_memory_free $memory_free
     system_disk_usage $disk_usage
     system_disk_free $disk_free
-    system_disk_total $disk_total" > "metrics.html"
+    system_disk_total $disk_total" > $output_file
 
     sleep 3
 done
