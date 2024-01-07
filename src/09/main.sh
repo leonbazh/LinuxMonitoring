@@ -4,7 +4,7 @@ output_file="/etc/nginx/metrics/metrics.html"
 
 while true
 do
-    cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+    cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}')
     memory_total=$(free | awk '/Mem/ {print $2}')
     memory_usage=$(free | awk '/Mem/ { printf $2 - $ 4 }')
     memory_free=$(free | awk '/Mem/ {print $4}')
